@@ -55,3 +55,15 @@ def nprimes(n):
 			for j in range(2,n/i+1):
 				L[i*j] = 1
 	return n-sum(L)+1
+	
+def sumofmultiples(L,n):
+	total = 0
+	for i in range(1,n+1):
+		add = False
+		for j in L:
+			if i % j == 0:
+				add = True
+				break
+		if add:
+			total += i
+	return total
