@@ -42,3 +42,16 @@ def kbiggest(L,k):
 		return -1
 	else:
 		return L[k-1]
+
+def nprimes(n):
+	if n < 2:
+		return 0
+	
+	L = [0]*(n+1)
+	L[0] = 1
+	L[1] = 1
+	for i in range(2,n+1):
+		if L[i] == 0:
+			for j in range(2,n/i+1):
+				L[i*j] = 1
+	return n-sum(L)+1
