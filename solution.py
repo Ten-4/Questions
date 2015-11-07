@@ -32,3 +32,13 @@ def coin_solver(coins,n):
 def facsum(n):
 	from math import factorial
 	return sum([ int(i) for i in str(factorial(n)) ])
+	
+def kbiggest(L,k):
+	L.sort()
+	L.reverse()
+	if len(L) <= k-1:
+		return -1
+	if k <= 0:
+		return -1
+	else:
+		return L[k-1]
