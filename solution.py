@@ -27,3 +27,8 @@ def coin_solver(coins,n):
 		if (n,val) in H:
 			total += H[(n,val)]
 	return total
+
+
+def facsum(n):
+	from math import factorial
+	return sum([ int(i) for i in str(factorial(n)) ])
